@@ -28,7 +28,7 @@ def all(message):
         message_id = message.message_id
         bot.forward_message(owner_chat_id,chat_id,message_id)
         bot.send_message(owner_chat_id, chat_id)
-        print(f"{user_name} -> WOZNIAK")
+        print(f"{user_name} -> {nome_owner}")
     else:
         reply_to_message = message.reply_to_message
         if reply_to_message is None:
@@ -37,7 +37,7 @@ def all(message):
             try:
                 message_id = message.message_id
                 bot.forward_message(reply_to_message.text, owner_chat_id, message_id)
-                print(f"WOZNIAK -> {reply_to_message.text}")
+                print(f"{nome_owner} -> {reply_to_message.text}")
             except:
                 bot.send_message(owner_chat_id, "Devi rispondere alla chat_id, non al messaggio.")
         
