@@ -12,7 +12,7 @@ def richiesta_aiuto(message):
 
 @bot.message_handler(commands=['start'])
 def richiesta_chat(message):
-    user_id = message.from_user.id
+    user_id =  message.from_user.id
     user_name = message.from_user.first_name
     chat_id = message.chat.id
     bot.send_message(chat_id, "Grazie per star utilizzando il mio bot.")
@@ -43,6 +43,6 @@ def all(message):
         
 
 
-print("Bot online. | Dev by WozDev")
+print("Bot online. | Dev by wozDev")
 
 bot.polling()
